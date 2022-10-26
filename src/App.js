@@ -1,9 +1,9 @@
+import { Register } from "./pages/Register";
+import './styles.scss'
 
 function App() {
   return (
-    <div>
-     Iniciando meu chat
-    </div>
+   <Register/>
   );
 }
 

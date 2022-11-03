@@ -1,3 +1,20 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+
 
 .formContainer{
   background-color: #a7bcff;
@@ -165,8 +182,12 @@
         justify-content: space-between;
         color: #ddddf7;
 
-       @media (max-width: 750px) {
+       @include tablet {
           display: grid;
+
+          .logo{
+            display: none;
+          }
        }
 
         .logo{
